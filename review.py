@@ -7,15 +7,15 @@ import yfinance as yf
 from pandas_datareader import data as pdr
 import plotly_express as px
 import sklearn as sk
-import talib as ta
+
 import stocknews
 import streamlit as st
 import  datetime as dt
 import backtesting
-from talib import SMA,EMA
+
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-import talib as ta
+
 
 
 
@@ -110,28 +110,9 @@ y_test=y_test*scale_factor
 
 
 
-st.subheader('Exponential Moving Average')
-import streamlit as st
 
-# your previous code goes here...
 
-# calculate EMA values
-df['EMA_200'] = ta.EMA(df['Close'],200)
-df['EMA_100'] = ta.EMA(df['Close'],100)
 
-# plot the chart
-fig, ax = plt.subplots()
-ax.plot(df['Close'])
-
-ax.plot(df['EMA_200'])
-ax.plot(df['EMA_100'])
-
-# display the chart in Streamlit
-st.pyplot(fig)
-
-# print the EMA values
-st.write("EMA_200 values:", df['EMA_200'].tail())
-st.write("EMA_100 values:", df['EMA_100'].tail())
 
 
 
