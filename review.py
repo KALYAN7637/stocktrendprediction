@@ -85,7 +85,7 @@ for i in range(100,data_training_array.shape[0]):
 
 x_train,y_train=np.array(x_train),np.array(y_train)
 
-model=load_model('keras_model.h5')
+model=load_model(r'keras_model.h5')
 
 
 past_100_days=data_training.tail(100)
