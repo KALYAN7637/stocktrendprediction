@@ -11,7 +11,7 @@ import sklearn as sk
 import stocknews
 import streamlit as st
 import  datetime as dt
-import backtesting
+
 
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
