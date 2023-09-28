@@ -17,10 +17,26 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
 
+'''
+To fetch Indian stock prices using Yahoo Finance's yfinance library, 
+you typically need to append the ".NS" suffix to the ticker name to specify that you are looking for stocks listed on the National Stock Exchange (NSE) of India. 
+Here's some information on how to do that:
+
+Ticker Symbol: In India, each stock is associated with a unique ticker symbol. 
+To fetch stock prices for Indian stocks, you should append the ".NS" suffix to the ticker symbol. 
+For example, if you want to fetch stock prices for Kotak Mahindra Bank, which is listed on the NSE, you can use the ticker symbol "KOTAKBANK.NS."
+'''
+
 
 
 st.title('Stock Trend Prediction')
 ticker=st.text_input('Enter Ticker Name','AAPL')
+
+
+
+
+
+
 
 start=st.date_input('Start', value=pd.to_datetime('2010-01-01'))
 end=st.date_input('End', value=pd.to_datetime('today'))
