@@ -161,6 +161,3 @@ df2.dropna(inplace = True)
 st.write(df)
 annual_return=df2['% Change'].mean()*252*100
 st.write('Annual Return is', annual_return,'%')
-stdev=np.std(df['% Change'])*np.sqrt(252)
-st.write('Standard Deviation is',stdev*100,'%')
-st.write('Risk Adj. Return is',annual_return/(stdev*100))
