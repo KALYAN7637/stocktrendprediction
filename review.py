@@ -29,7 +29,7 @@ For example, if you want to fetch stock prices for Kotak Mahindra Bank, which is
 
 
 
-st.title('Stock Trend Prediction')
+st.title('Stock Trend Prediction Using LSTM on Global Stock Markets')
 ticker=st.text_input('Enter Ticker Name','AAPL')
 
 
