@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import pandas_datareader  as data
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import numpy as np
 import yfinance as yf
 from pandas_datareader import data as pdr
@@ -12,6 +12,7 @@ import stocknews
 import streamlit as st
 import  datetime as dt
 
+import re
 
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
@@ -101,11 +102,11 @@ for i in range(100,data_training_array.shape[0]):
 
 x_train,y_train=np.array(x_train),np.array(y_train)
 
-model=load_model(r'keras_model.h5')
+model=load_model('keras_model.h5')
 
 
 past_100_days=data_training.tail(100)
-final_df=past_100_days.append(data_testing, ignore_index=True)
+final_df = pd.concat([past_100_days, data_testing], ignore_index=True)
 input_data=scaler.fit_transform(final_df)
 
 x_test=[]
