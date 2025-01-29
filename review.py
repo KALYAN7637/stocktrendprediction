@@ -43,8 +43,8 @@ end=st.date_input('End', value=pd.to_datetime('today'))
 
 
 df=yf.download(ticker,start,end)
-fig= px.line(df,x=df.index, y=df['Close'], title=ticker)
-st.plotly_chart(fig)
+#fig= px.line(df,x=df.index, y=df['Close'], title=ticker)
+#st.plotly_chart(fig)
 
 st.subheader('Data From Start Date To Today')
 st.write(df.tail())
